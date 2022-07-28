@@ -1,0 +1,170 @@
+CREATE TABLE teacher
+(
+    id   SERIAL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    age  INT         NOT NULL
+);
+INSERT INTO teacher(name, age)
+VALUES ('Zamir', 25),
+       ('Nurisa', 25),
+       ('Aijamal', 25);
+
+CREATE TABLE student
+(
+    id    SERIAL PRIMARY KEY,
+    name  varchar(20) NOT NULL,
+    age   INT         NOT NULL,
+    Group varchar(20) NOT NULL
+);
+INSERT INTO student(name, age, Group)
+VALUES ('Abdunuur', 16, 'Java-6');
+
+CREATE TABLE Pets
+(
+    id     SERIAL PRIMARY KEY,
+    name   VARCHAR(20) NOT NULL,
+    age    INT         NOT NULL,
+    gender VARCHAR(20) NOT NULL
+);
+INSERT INTO Pets(name, age, gender)
+VALUES ('Cat', 3, 'Man'),
+       ('Dog', 4, 'Woman');
+
+CREATE TABLE predatory_animals
+(
+    id     SERIAL PRIMARY KEY,
+    name   VARCHAR(20) NOT NULL,
+    gender VARCHAR(20) NOT NULL
+);
+INSERT INTO predatory_animals(name, gender)
+VALUES ('Lion', 'Man'),
+       ('Wolf', 'Man'),
+       ('Hyena', 'Woman'),
+       ('Сrocodile', 'Man');
+
+CREATE TABLE house
+(
+    id    SERIAL PRIMARY KEY,
+    house VARCHAR(20) NOT NULL,
+    room  INT         NOT NULL,
+    price INT         NOT NULL
+);
+INSERT INTO house(house, room, price)
+VALUES ('flat', 3, 21000),
+       ('flat', 1, '8000'),
+       ('privat house', 5, 34000);
+
+
+CREATE TABLE car
+(
+    id    SERIAL PRIMARY KEY,
+    name  VARCHAR(30) NOT NULL,
+    age   INT,
+    color varchar(20) NOT NULL,
+    abyom DOUBLE PRECISION
+);
+INSERT INTO car(name, age, color, abyom)
+VALUES ('BMW', 2005, 'black', 5.5),
+       ('Tayota', 2002, 'red', 3.5),
+       ('Honda', 2000, 'black', 4.2);
+
+
+CREATE TABLE phone
+(
+    id    SERIAL PRIMARY KEY,
+    name  VARCHAR(20) NOT NULL,
+    gd    INT         NOT NULL,
+    color varchar(20) NOT NULL
+);
+INSERT INTO phone(name, gd, color)
+VALUES ('SAMSUNG', 64, 'red'),
+       ('MI', 128, 'black'),
+       ('SAMSUNG', 32, 'black');
+
+
+CREATE TABLE noutbuk
+(
+    id    SERIAL PRIMARY KEY,
+    name  VARCHAR(20) NOT NULL,
+    gd    INT         NOT NULL,
+    color varchar(20) NOT NULL
+);
+INSERT INTO noutbuk(name, gd, color)
+VALUES ('LENOVO', 1024, 'red'),
+       ('LENOVO', 512, 'black'),
+       ('acer', 256, 'black');
+
+
+CREATE TABLE pen
+(
+    id    SERIAL PRIMARY KEY,
+    price INT         NOT NULL,
+    color varchar(20) NOT NULL
+);
+INSERT INTO pen(price, color)
+VALUES (20, 'blue'),
+       (30, 'red'),
+       (30, 'black');
+
+
+CREATE TABLE juice
+(
+    id    SERIAL PRIMARY KEY,
+    name  VARCHAR(20)      NOT NULL,
+    lityr DOUBLE PRECISION NOT NULL,
+    price INT              NOT NULL
+);
+INSERT INTO juice(name, lityr, price)
+VALUES ('COLA', 1.5, 90),
+       ('ASU', 0.5, 20),
+       ('Legenda', 0.5, 25);
+
+create table actor
+(
+    id     int primary key,
+    gender varchar(8),
+    name   varchar(55),
+    year   int
+);
+insert into actor(id, gender, name, year)
+values (1, 'male', 'mark wallberg', 35);
+
+create table citizen
+(
+    id   int primary key,
+    name varchar(255),
+    job  varchar(255)
+
+);
+
+insert into citizen(id, name, job)
+values (1, 'bob', 'backend Dev');
+
+create table city
+(
+    id         int primary key,
+    name       varchar(55),
+    postalcode int
+);
+
+insert into city(id, name, postalcode)
+values (1, 'bishkek', 720000);
+
+create table drivers
+(
+    id   int primary key,
+    name varchar(55)
+
+);
+
+insert into drivers(id, name)
+values (1, 'aza');
+
+create table instructor
+(
+    id   int primary key,
+    name varchar not null
+);
+
+insert into instructor(id, name)
+values (1, 'bob marley');
